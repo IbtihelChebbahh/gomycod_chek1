@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Fragment } from 'react';
+import Greeting from './Components/Greeting';
 function App() {
+  const fullName='Jhon dee '
+  const age=44
+  const Arra=['Jhoe','Jane']
+  //const res=Arra.map(el=>`Hello ${el}`);
+  
+  //const res=Arra.map(name=> <li>{name}</li>);
+  //console.log(res); 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+    <Greeting fullName={fullName} age={age}/>
+
+     <p> {1+2}</p>
+     <ul>
+     {Arra.map((name,i)=>(<li key={i}>{name}</li>))}</ul>
+ </Fragment>
   );
 }
 
